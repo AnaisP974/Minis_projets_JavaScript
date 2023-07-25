@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Minis projets Javascript :</title>
+</head>
+<body>
+    <header>
+        <nav class="tab">
+            <button onclick="openOnglet(event,'Home')" class="tablinks">Accueil</button>
+            <button onclick="openOnglet(event,'Chrono')" class="tablinks">Top chrono</button>
+            <button onclick="openOnglet(event,'Todo')" class="tablinks">To Do List</button>
+        </nav>
+    </header>
+
+    <div class="tabcontent" id="Home">
+        <h1>Minis projets Javascripts !</h1>
+        <p>Bienvenue sur la page d'Accueil</p>
+        <div class="picture">
+            <img src="image/home-page.jpg" alt="illustration de la page d'Accueil">
+        </div>
+    </div>
+
+    <div class="tabcontent" id="Chrono">
+        <h1 class="chrono">TOP CHRONO !</h1><br>
+        <div class="bloc-chrono">
+            <div class="chronometre">
+                <div class="tim">
+                    <span>0 h</span> :
+                    <span>0 min</span> :
+                    <span>0 s</span> :
+                    <span>0 ms</span>
+                </div>
+                <div class="controls">
+                    <button id="start" title="Lancer le chrono" onclick="start()" class="chrono">Start</button>
+                    <button id="stop" title="Pause" onclick="stop()" class="chrono">Pause</button>
+                    <button id="reset" title="Remettre à zéro" onclick="reset()" class="chrono">Redémarrer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tabcontent" id="Todo">
+        <h1>To Do List</h1><br>
+        <section class="todo">
+            <h1 class="todo">Mon Gestionnaire de tâches en ligne :</h1>
+            <div class="container">
+                <div class="full_input">
+                    <input type="text" name="inputField" id="inputField" placeholder="Ajouter une tâche..." class="todo">
+                    <button id="addToDo" class="todo">+</button>
+                </div>
+                <div id="toDoContainer"></div>
+            </div>
+        </section>
+    </div>
+        
+    
+    <script src="script.js"></script>
+</body>
+</html>
